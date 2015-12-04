@@ -6,10 +6,16 @@ import grails.plugins.rest.client.RestResponse
 import grails.transaction.Transactional
 import org.codehaus.groovy.grails.web.json.JSONElement
 
+import com.fasterxml.jackson.databind.*
+import com.fasterxml.jackson.annotation.*
+
 @Transactional
 class ProductService {
 
+    def mapper = new ObjectMapper()
+
     def searchProduct(String keyword, int minPrice, int maxPrice) {
+        mapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
         def rest = new RestBuilder()
         def res = rest.post('https://api.cdiscount.com/OpenApi/json/Search') {
             json '{' +
@@ -34,7 +40,7 @@ class ProductService {
                     '  }' +
                     '}'
         }
-
+        return mapper.readValue( res.text, SearchResult.class )
     }
 
 }
