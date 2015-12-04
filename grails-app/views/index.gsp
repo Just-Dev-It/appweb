@@ -29,7 +29,7 @@
   <div class="page">
     <div class="container-fluid">
       <div class="page-header">
-        <h2><a href="http://temasys.github.io/"><img class="img-responsive" src="images/skylinkjs.svg" alt="Skylink JS" height="120px"; width="135px"></a>
+        <h2><a href="http://temasys.github.io/"><img class="img-responsive" src="images/skylinkjs.svg" alt="Skylink JS" height="120px"; width="135px"></a></h2>
          <small>Client API Documentation</small></h1>
       </div>
       <div class="col-md-4 panel panel-default">
