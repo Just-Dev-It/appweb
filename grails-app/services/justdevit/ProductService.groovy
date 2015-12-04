@@ -1,4 +1,4 @@
-package appweb
+package justdevit
 
 import grails.transaction.Transactional
 
@@ -8,4 +8,5 @@ class ProductService {
     def searchProduct() {
 
     }
+
 }
