@@ -1,6 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+
+
+		<meta name="layout" content="main"/>
+		<title>Welcome to Grails</title>
+
+
+
+
+
+
   <title>SkylinkJS</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="./favicon.ico">
@@ -25,10 +36,15 @@
   </style>
 </head>
 <body>
+
+
+<div class="form-group">
 <g:form controller="crisis" action="doSearchCrisis" method="post">
-    <input id="rechercher"  type="text"  name="stringToSearch" placeholder="Tapez votre recherche..." />
+    <input id="rechercher"  type="text" class="form-control" name="stringToSearch" placeholder="Tapez votre recherche..." />
     <g:actionSubmit  controller="crisis" action="doSearchCrisis" value="Rechercher"/>
 </g:form>
+</div>
+
 <div>
   <div class="page">
     <div class="container-fluid">
