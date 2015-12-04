@@ -4,7 +4,7 @@ class Product {
     String id
     String name
     String mainImageUrl
-    double  salePrice
+    double salePrice
     String sellerId
     String sellerName
 
