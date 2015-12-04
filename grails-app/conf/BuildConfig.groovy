@@ -51,6 +51,10 @@ grails.project.dependency.resolution = {
         // runtime 'mysql:mysql-connector-java:5.1.27'
         // runtime 'org.postgresql:postgresql:9.3-1100-jdbc41'
         test "org.grails:grails-datastore-test-support:1.0-grails-2.3"
+        compile 'com.fasterxml.jackson.core:jackson-core:2.6.3'
+        compile 'com.fasterxml.jackson.core:jackson-annotations:2.6.3'
+        compile 'com.fasterxml.jackson.core:jackson-databind:2.6.3'
+
     }
 
     plugins {
