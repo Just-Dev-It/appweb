@@ -7,12 +7,21 @@ import grails.transaction.Transactional
 @Transactional(readOnly = true)
 class CrisisController {
 
-
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
+
+    CrisisService crisisService
+    int nbItemByPage = 5
 
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
         respond Crisis.list(params), model: [crisisInstanceCount: Crisis.count()]
+    }
+
+    def doSearchCrisis() {
+        def offsetTmp = params.int('offset') ?: 0
+        params.max = nbItemByPage
+        def crisisList = crisisService.searchCrisis(params, nbItemByPage, offsetTmp)
+        render(view: 'index', model: [crisisInstanceList: crisisList, crisisInstanceCount: crisisList.size(), itemsCount: crisisList.getTotalCount()])
     }
 
     def show(Crisis crisisInstance) {
