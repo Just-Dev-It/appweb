@@ -29,28 +29,21 @@
 			<table>
 			<thead>
 					<tr>
-					
-						<g:sortableColumn property="facebook" title="${message(code: 'crisis.facebook.label', default: 'Facebook')}" />
-					
-						<g:sortableColumn property="hashtag" title="${message(code: 'crisis.hashtag.label', default: 'Hashtag')}" />
-					
-						<g:sortableColumn property="location" title="${message(code: 'crisis.location.label', default: 'Location')}" />
-					
+
 						<g:sortableColumn property="name" title="${message(code: 'crisis.name.label', default: 'Name')}" />
-					
+						<g:sortableColumn property="location" title="${message(code: 'crisis.location.label', default: 'Location')}" />
+
+
+
 					</tr>
 				</thead>
 				<tbody>
 				<g:each in="${crisisInstanceList}" status="i" var="crisisInstance">
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 					
-						<td><g:link action="show" id="${crisisInstance.id}">${fieldValue(bean: crisisInstance, field: "facebook")}</g:link></td>
-					
-						<td>${fieldValue(bean: crisisInstance, field: "hashtag")}</td>
-					
+						<td><g:link action="show" id="${crisisInstance.id}">${fieldValue(bean: crisisInstance, field: "name")}</g:link></td>
+
 						<td>${fieldValue(bean: crisisInstance, field: "location")}</td>
-					
-						<td>${fieldValue(bean: crisisInstance, field: "name")}</td>
 					
 					</tr>
 				</g:each>
