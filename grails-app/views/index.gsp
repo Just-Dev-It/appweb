@@ -1,89 +1,66 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta name="layout" content="main"/>
-		<title>Welcome to Grails</title>
-		<style type="text/css" media="screen">
-			#status {
-				background-color: #eee;
-				border: .2em solid #fff;
-				margin: 2em 2em 1em;
-				padding: 1em;
-				width: 12em;
-				float: left;
-				-moz-box-shadow: 0px 0px 1.25em #ccc;
-				-webkit-box-shadow: 0px 0px 1.25em #ccc;
-				box-shadow: 0px 0px 1.25em #ccc;
-				-moz-border-radius: 0.6em;
-				-webkit-border-radius: 0.6em;
-				border-radius: 0.6em;
-			}
-
-			.ie6 #status {
-				display: inline; /* float double margin fix http://www.positioniseverything.net/explorer/doubled-margin.html */
-			}
-
-			#status ul {
-				font-size: 0.9em;
-				list-style-type: none;
-				margin-bottom: 0.6em;
-				padding: 0;
-			}
-
-			#status li {
-				line-height: 1.3;
-			}
-
-			#status h1 {
-				text-transform: uppercase;
-				font-size: 1.1em;
-				margin: 0 0 0.3em;
-			}
-
-			#page-body {
-				margin: 2em 1em 1.25em 18em;
-			}
-
-			h2 {
-				margin-top: 1em;
-				margin-bottom: 0.3em;
-				font-size: 1em;
-			}
-
-			p {
-				line-height: 1.5;
-				margin: 0.25em 0;
-			}
-
-			#controller-list ul {
-				list-style-position: inside;
-			}
-
-			#controller-list li {
-				line-height: 1.3;
-				list-style-position: inside;
-				margin: 0.25em 0;
-			}
-
-			@media screen and (max-width: 480px) {
-				#status {
-					display: none;
-				}
-
-				#page-body {
-					margin: 0 1em 1em;
-				}
-
-				#page-body h1 {
-					margin-top: 0;
-				}
-			}
-		</style>
-	</head>
-	<body>
-    <g:form controller="crisis" action="doSearchCrisis" method="post">
-        <input id="rechercher"  type="text"  name="stringToSearch" placeholder="Tapez votre recherche..." />
-        <g:actionSubmit  controller="crisis" action="doSearchCrisis" value="Rechercher"/>
-    </g:form>
-	</body>
+<head>
+  <title>SkylinkJS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="./favicon.ico">
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet" media="screen">
+  <link href="http://cdnjs.cloudflare.com/ajax/libs/prettify/r224/prettify.css" type="text/css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.0/jquery.min.js" type="text/javascript"></script>
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/prettify/r224/prettify.js" type="text/javascript"></script>
+  <style>
+  .row-eq-height {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+    .table {
+      font-size:12px;
+    }
+    .table th {
+      font-size:14px;
+    }
+  </style>
+</head>
+<body>
+<div>
+  <div class="page">
+    <div class="container-fluid">
+      <div class="page-header">
+        <h2><a href="http://temasys.github.io/"><img class="img-responsive" src="images/skylinkjs.svg" alt="Skylink JS" height="120px"; width="135px"></a></h2>
+         <small>Client API Documentation</small></h1>
+      </div>
+      <div class="col-md-4 panel panel-default">
+        <div class="panel-heading">
+          <h4>Chat room</h4>
+        </div>
+        <div class="panel-body">
+          <p>
+          <em>This demo presents an IRC like chat powered by SkylinkJS.</em>
+        </p>
+        <hr>
+        <ul>
+          <li>Automatically connects to default Room</li>
+          <li>Handle connection and disconnection of peers</li>
+        </ul>
+        <div class="panel panel-info">
+            <div class="panel-heading">Difficulty</div>
+            <div class="progress" style="height:20px;margin:5px;">
+              <div class="progress-bar progress-bar-success"
+                role="progressbar" aria-valuenow="2" aria-valuemin="0" aria-valuemax="10" style="width:30%;">
+                Easy
+              </div>
+            </div>
+          </div>
+        <p>
+          <a href="static/st/chat-room/index.html" class="btn btn-primary">View Demo</a>
+        </p>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+</body>
 </html>
