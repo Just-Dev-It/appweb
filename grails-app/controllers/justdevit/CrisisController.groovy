@@ -7,6 +7,8 @@ import grails.transaction.Transactional
 @Transactional(readOnly = true)
 class CrisisController {
 
+    ProductService productService
+
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
 
     CrisisService crisisService
@@ -25,7 +27,9 @@ class CrisisController {
     }
 
     def show(Crisis crisisInstance) {
-        respond crisisInstance
+        def products = crisisInstance.products.asList()
+        def actualities = crisisInstance.actuality.asList()
+        render(view: 'show', model: [crisisInstance: crisisInstance, products: products, actualities: actualities])
     }
 
     def create() {

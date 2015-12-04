@@ -78,6 +78,10 @@ h1 {
 	margin: 0.8em 0 0.3em 0;
 }
 
+h1 span {
+	float: right;
+}
+
 ul {
 	padding: 0;
 }
@@ -94,8 +98,22 @@ img {
 }
 
 .content {
-	width: 80%;
+	width: 90%;
 	margin: 30px auto;
+}
+
+.actuality, .products {
+	display: inline-block;
+}
+
+.actuality {
+	width: 70%;
+}
+
+.products {
+	width: 25%;
+	padding: 2%;
+	border: 1px dotted #666;
 }
 
 .content h1 {
