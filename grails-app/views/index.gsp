@@ -1,6 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+
+
+		<meta name="layout" content="main"/>
+		<title>Welcome to Grails</title>
+
+
+
+
+
+
   <title>SkylinkJS</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="./favicon.ico">
@@ -25,6 +36,11 @@
   </style>
 </head>
 <body>
+
+<div class="form-group">
+    <input type="text" class="form-control" id="usr" placeholder="#">
+
+</div>
 <div>
   <div class="page">
     <div class="container-fluid">
