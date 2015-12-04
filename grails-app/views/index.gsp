@@ -25,6 +25,10 @@
   </style>
 </head>
 <body>
+<g:form controller="crisis" action="doSearchCrisis" method="post">
+    <input id="rechercher"  type="text"  name="stringToSearch" placeholder="Tapez votre recherche..." />
+    <g:actionSubmit  controller="crisis" action="doSearchCrisis" value="Rechercher"/>
+</g:form>
 <div>
   <div class="page">
     <div class="container-fluid">
