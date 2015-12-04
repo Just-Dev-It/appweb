@@ -21,7 +21,17 @@
 			<g:actionSubmit  controller="crisis" action="doSearchCrisis" value="Rechercher"/>
 		</g:form>
 	</div>
-		<div id="list-crisis" class="content scaffold-list" role="main">
+    <div class="col-md-1">
+        <g:if test="${session["currentAdmin"] != null}">
+            <a href="${createLink(controller:'user', action:'deconnection')}" >Déconnexion</a>
+        </g:if>
+        <g:else>
+            <a href="${createLink(controller:'user', action:'loginUser')}" >Admin se connecter</a>
+            <a href="${createLink(controller:'user', action:'create')}" >Admin inscription</a>
+        </g:else>
+    </div>
+
+		<div id="list-crisis"  role="main">
 			<h1><g:message code="default.list.label" args="[entityName]" /></h1>
 			<g:if test="${flash.message}">
 				<div class="message" role="status">${flash.message}</div>
