@@ -8,6 +8,7 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
 <html>
 <head>
+    <meta name="layout" content="main">
     <title></title>
 </head>
 
@@ -17,7 +18,7 @@
 </g:if>
 <h1 align="center" style="color: #1A4491">Saisissez vos informations </h1>
 <g:form controller="user" action="loggedInUser" style="margin-left: 35%">
-    <fieldset class="form">
+    <fieldset >
         <table style="border-collapse: separate">
             <tr>
                 <div class="fieldcontain ${hasErrors(bean: userInstance, field: 'username', 'error')} required">
