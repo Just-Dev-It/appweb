@@ -15,14 +15,15 @@
 				<li><g:link class="create" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link></li>
 			</ul>
 		</div>
-	<div class="form-group">
-		<g:form controller="crisis" action="doSearchCrisis" method="post">
-			<input id="rechercher"  type="text" class="form-control" name="stringToSearch" placeholder="Tapez votre recherche..." />
-			<g:actionSubmit  controller="crisis" action="doSearchCrisis" value="Rechercher"/>
-		</g:form>
-	</div>
+
+
 		<div id="list-crisis" class="content scaffold-list" role="main">
-			<h1><g:message code="default.list.label" args="[entityName]" /></h1>
+			<div class="form-group">
+				<g:form controller="crisis" action="doSearchCrisis" method="post">
+					<input id="rechercher"  type="text" name="stringToSearch" placeholder="Filtrer par nom..." />
+					<g:actionSubmit  controller="crisis" action="doSearchCrisis" value="Rechercher"/>
+				</g:form>
+			</div>
 			<g:if test="${flash.message}">
 				<div class="message" role="status">${flash.message}</div>
 			</g:if>
@@ -49,9 +50,6 @@
 				</g:each>
 				</tbody>
 			</table>
-			<div class="pagination">
-				<g:paginate total="${crisisInstanceCount ?: 0}" />
-			</div>
 		</div>
 	</body>
 </html>
