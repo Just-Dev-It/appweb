@@ -106,6 +106,6 @@ CrisisService crisisService
         def offsetTmp = params.int('offset') ?: 0
         params.max =nbItemByPage
         def crisisList = crisisService.searchCrisis(params, nbItemByPage, offsetTmp)
-        render(view: '/crisis/index', model: [crisisInstanceList: crisisList, crisisInstanceCount: crisisList.size(), itemsCount: crisisList.getTotalCount()])
+        render(view: '/index', model: [crisisInstanceList: crisisList, crisisInstanceCount: crisisList.size(), itemsCount: crisisList.getTotalCount()])
     }
 }
